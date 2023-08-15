@@ -209,7 +209,7 @@ suite('Unit Tests', () => {
         
         test('Translate \'Prof Joyner of King\'s College, London.\' to American English', function(done) {
             let input = 'Prof Joyner of King\'s College, London.'
-            let expected = 'Prof Joyner of King\'s College, London.'
+            let expected = 'Prof. Joyner of King\'s College, London.'
             let result = translator.translateToAmericanEnglish(input);
             assert.isArray(result);
             assert.equal(result.length, 2);
@@ -255,7 +255,7 @@ suite('Unit Tests', () => {
         test('Highlight translation in \'We watched the footie match for a while.\'', function(done) {
             let input = 'We watched the footie match for a while.'
             let expected = 'We watched the <span class="highlight">soccer</span> match for a while.'
-            let result = translator.translateToBritishEnglish(input);
+            let result = translator.translateToAmericanEnglish(input);
             assert.isArray(result);
             assert.equal(result.length, 2);
             assert.isString(result[1]);
@@ -266,7 +266,7 @@ suite('Unit Tests', () => {
         test('Highlight translation in \'Paracetamol takes up to an hour to work.\'', function(done) {
             let input = 'Paracetamol takes up to an hour to work.'
             let expected = '<span class="highlight">Tylenol</span> takes up to an hour to work.'
-            let result = translator.translateToBritishEnglish(input);
+            let result = translator.translateToAmericanEnglish(input);
             assert.isArray(result);
             assert.equal(result.length, 2);
             assert.isString(result[1]);

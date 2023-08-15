@@ -121,7 +121,7 @@ suite('Functional Tests', () => {
             .post('/api/translate')
             .send({
                 "text": americanToBritish,
-                "locale": "american-to-british"
+                "locale": "british-to-american"
             })
             .end((err, res) => {
                 assert.property(res.body, 'text');
