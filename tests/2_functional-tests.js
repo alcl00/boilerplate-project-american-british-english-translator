@@ -12,8 +12,8 @@ suite('Functional Tests', () => {
         let americanToBritish = 'Mangoes are my favorite fruit.';
         let britishToAmerican = 'We watched the footie match for a while.'
 
-        let americanToBritishExpected = 'Mangoes are my favourite fruit.'
-        let britishToAmericanExpected = 'We watched the soccer match for a while.'
+        let americanToBritishExpected = 'Mangoes are my <span class="highlight">favourite</span> fruit.'
+        let britishToAmericanExpected = 'We watched the <span class="highlight">soccer</span> match for a while.'
 
         test('With text and locale fields', function(done) {
             chai.request(server)

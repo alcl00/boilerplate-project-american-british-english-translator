@@ -38,6 +38,6 @@ module.exports = function (app) {
         res.json({ text: req.body.text, translation: "Everything looks good to me!" })
         return;
       }
-      res.json({ text: req.body.text, translation: translation[0] })
+      res.json({ text: req.body.text, translation: translation[1] })
     });
 };
